@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ex3.html',
   styleUrl: './ex3.css',
 })
-export class Ex3 {}
-export class Appcomponent{
+export class Ex3 {
   imagemProduto = 'https://angular.io/assets/images/logos/angular/angular.svg';
   descricaoimagem = 'imagem do prduto ';
 }
