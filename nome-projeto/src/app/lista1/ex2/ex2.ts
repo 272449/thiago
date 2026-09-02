@@ -7,3 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './ex2.css',
 })
 export class Ex2 {}
+export class Appcomponent{
+  produto = 'teclado';
+  preco = '1500';
+  quantidade = 3;
+}
