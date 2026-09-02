@@ -7,3 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './ex3.css',
 })
 export class Ex3 {}
+export class Appcomponent{
+  imagemProduto = 'hattps://via.placeholder.com/300';
+  descricaoimagem = 'imagem do prduto ';
+}
