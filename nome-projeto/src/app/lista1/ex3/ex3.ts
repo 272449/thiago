@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class Ex3 {}
 export class Appcomponent{
-  imagemProduto = 'hattps://via.placeholder.com/300';
+  imagemProduto = 'https://via.placeholder.com/300';
   descricaoimagem = 'imagem do prduto ';
 }
