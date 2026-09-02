@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class Ex3 {}
 export class Appcomponent{
-  imagemProduto = 'https://via.placeholder.com/300';
+  imagemProduto = 'https://angular.io/assets/images/logos/angular/angular.svg';
   descricaoimagem = 'imagem do prduto ';
 }
