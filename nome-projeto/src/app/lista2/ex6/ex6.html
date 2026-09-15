@@ -1,1 +1,25 @@
-<p>ex6 works!</p>
+<h2>Exercício 6</h2>
+
+<p>Total de nomes: {{ nomes.length }}</p>
+
+<button (click)="removerUltimo()">
+  Remover último
+</button>
+
+<button (click)="limparLista()">
+  Limpar lista
+</button>
+
+<button (click)="restaurarLista()">
+  Restaurar lista
+</button>
+
+<p *ngIf="nomes.length === 0">
+  Nenhum nome cadastrado
+</p>
+
+<ul>
+  <li *ngFor="let nome of nomes">
+    {{ nome }}
+  </li>
+</ul>

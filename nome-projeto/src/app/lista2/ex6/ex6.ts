@@ -1,9 +1,21 @@
-import { Component } from '@angular/core';
+nomesIniciais = [
+  'João',
+  'Maria',
+  'Carlos',
+  'Ana',
+  'Pedro'
+];
 
-@Component({
-  selector: 'app-ex6',
-  standalone: false,
-  templateUrl: './ex6.html',
-  styleUrl: './ex6.css',
-})
-export class Ex6 {}
+nomes = [...this.nomesIniciais];
+
+removerUltimo(); {
+  this.nomes.pop();
+}
+
+limparLista(); {
+  this.nomes = [];
+}
+
+restaurarLista(); {
+  this.nomes = [...this.nomesIniciais];
+}
