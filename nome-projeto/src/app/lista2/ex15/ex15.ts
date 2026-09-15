@@ -1,9 +1,1 @@
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-ex15',
-  standalone: false,
-  templateUrl: './ex15.html',
-  styleUrl: './ex15.css',
-})
-export class Ex15 {}
+import { Component } from '@angular/core'; interface Projeto { id: number; titulo: string; equipe: string; nota: number | null; status: | 'planejamento' | 'desenvolvimento' | 'testes' | 'concluído'; entregue: boolean; } @Component({ selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.css'] }) export class AppComponent { mostrarConcluidos = true; projetos: Projeto[] = [ { id: 1, titulo: 'Sistema de Biblioteca', equipe: 'Equipe A', nota: 8.5, status: 'concluído', entregue: true }, { id: 2, titulo: 'Aplicativo Financeiro', equipe: 'Equipe B', nota: 5.5, status: 'testes', entregue: false }, { id: 3, titulo: 'Sistema Escolar', equipe: 'Equipe C', nota: 7, status: 'desenvolvimento', entregue: false }, { id: 4, titulo: 'Loja Virtual', equipe: 'Equipe D', nota: null, status: 'planejamento', entregue: false }, { id: 5, titulo: 'Aplicativo de Eventos', equipe: 'Equipe E', nota: 9, status: 'concluído', entregue: true } ]; alterarStatus(projeto: Projeto) { if (projeto.status === 'planejamento') { projeto.status = 'desenvolvimento'; } else if (projeto.status === 'desenvolvimento') { projeto.status = 'testes'; } else if (projeto.status === 'testes') { projeto.status = 'concluído'; } else { projeto.status = 'planejamento'; } } get projetosConcluidos(): number { return this.projetos.filter( projeto => projeto.status === 'concluído' ).length; } get projetosVisiveis(): Projeto[] { if (this.mostrarConcluidos) { return this.projetos; } return this.projetos.filter( projeto => projeto.status !== 'concluído' ); } }

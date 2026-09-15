@@ -1,1 +1,36 @@
-<p>ex12 works!</p>
+<h2>Exercício 12</h2>
+
+<input
+  type="text"
+  [(ngModel)]="novoNome"
+  placeholder="Nome do produto"
+>
+
+<input
+  type="number"
+  [(ngModel)]="novaQuantidade"
+  placeholder="Quantidade"
+>
+
+<button (click)="cadastrarProduto()">
+  Cadastrar
+</button>
+
+<p *ngIf="mensagemErro">
+  {{ mensagemErro }}
+</p>
+
+<hr>
+
+<div *ngFor="let produto of produtos">
+
+  <p>
+    {{ produto.nome }} -
+    Quantidade: {{ produto.quantidade }}
+  </p>
+
+  <button (click)="excluirProduto(produto.id)">
+    Excluir
+  </button>
+
+</div>

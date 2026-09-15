@@ -1,1 +1,45 @@
-<p>ex13 works!</p>
+<h2>Exercício 13</h2>
+
+<p>Total de tarefas: {{ tarefas.length }}</p>
+
+<p>
+  Concluídas: {{ tarefasConcluidas }}
+</p>
+
+<p>
+  Pendentes: {{ tarefasPendentes }}
+</p>
+
+<p *ngIf="tarefas.length === 0">
+  Não existem tarefas.
+</p>
+
+<div
+  *ngFor="let tarefa of tarefas"
+  [ngClass]="{
+    'prioridade-baixa': tarefa.prioridade === 'baixa',
+    'prioridade-media': tarefa.prioridade === 'média',
+    'prioridade-alta': tarefa.prioridade === 'alta',
+    'concluida': tarefa.concluida
+  }"
+>
+
+  <h3>{{ tarefa.titulo }}</h3>
+
+  <p>Responsável: {{ tarefa.responsavel }}</p>
+
+  <p>Prioridade: {{ tarefa.prioridade }}</p>
+
+  <p *ngIf="tarefa.concluida; else pendente">
+    Concluída
+  </p>
+
+  <ng-template #pendente>
+    <p>Pendente</p>
+  </ng-template>
+
+  <button (click)="alterarSituacao(tarefa)">
+    Alterar situação
+  </button>
+
+</div>
