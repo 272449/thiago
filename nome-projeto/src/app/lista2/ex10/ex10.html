@@ -1,1 +1,35 @@
-<p>ex10 works!</p>
+<h2>Exercício 10</h2>
+
+<div *ngFor="let produto of produtos">
+
+  <p
+    [ngStyle]="{
+      'font-weight': produto.promocao ? 'bold' : 'normal',
+      'color': produto.promocao ? 'red' : 'black'
+    }"
+  >
+    {{ produto.nome }}
+  </p>
+
+  <p
+    [ngStyle]="{
+      'color': produto.promocao ? 'blue' : 'black'
+    }"
+  >
+    Preço:
+    {{ produto.preco | currency:'BRL' }}
+  </p>
+
+  <p *ngIf="produto.promocao">
+    Produto em promoção
+  </p>
+
+  <button (click)="alternarPromocao(produto)">
+    Ativar/desativar promoção
+  </button>
+
+  <hr>
+
+</div>
+
+
