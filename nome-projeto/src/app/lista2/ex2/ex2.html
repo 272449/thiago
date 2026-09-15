@@ -1,1 +1,11 @@
-<p>ex2 works!</p>
+<h2>Exercício 2</h2>
+
+<div *ngIf="usuarioLogado; else naoLogado">
+  <p>Usuário autenticado</p>
+  <button (click)="alternarLogin()">Sair</button>
+</div>
+
+<ng-template #naoLogado>
+  <p>Acesso não autorizado</p>
+  <button (click)="alternarLogin()">Entrar</button>
+</ng-template>

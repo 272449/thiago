@@ -1,9 +1,5 @@
-import { Component } from '@angular/core';
+usuarioLogado = false;
 
-@Component({
-  selector: 'app-ex2',
-  standalone: false,
-  templateUrl: './ex2.html',
-  styleUrl: './ex2.css',
-})
-export class Ex2 {}
+alternarLogin(); {
+  this.usuarioLogado = !this.usuarioLogado;
+}

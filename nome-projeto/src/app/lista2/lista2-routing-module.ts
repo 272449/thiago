@@ -13,7 +13,10 @@ const routes: Routes = [
   { path: 'ex9', component: Ex9 },
    { path: 'ex10', component: Ex10 },
     { path: 'ex11', component: Ex11},
-     { path: 'ex12', component: Ex12 }
+     { path: 'ex12', component: Ex12 },
+     { path: 'ex13', component: Ex13 },
+     { path: 'ex14', component: Ex14 },
+     { path: 'ex15', component: Ex15 }
 ];
 
 @NgModule({

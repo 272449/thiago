@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+idade = 18;
 
-@Component({
-  selector: 'app-ex3',
-  standalone: false,
-  templateUrl: './ex3.html',
-  styleUrl: './ex3.css',
-})
-export class Ex3 {}
+aumentarIdade(); {
+  this.idade++;
+}
+
+diminuirIdade(); {
+  if (this.idade > 0) {
+    this.idade--;
+  }
+}

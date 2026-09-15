@@ -1,1 +1,22 @@
-<p>ex3 works!</p>
+<h2>Exercício 3</h2>
+
+<p>Idade: {{ idade }}</p>
+
+<button (click)="aumentarIdade()">Aumentar</button>
+<button (click)="diminuirIdade()">Diminuir</button>
+
+<div *ngIf="idade < 12">
+  Criança
+</div>
+
+<div *ngIf="idade >= 12 && idade <= 17">
+  Adolescente
+</div>
+
+<div *ngIf="idade >= 18 && idade <= 59">
+  Adulto
+</div>
+
+<div *ngIf="idade >= 60">
+  Idoso
+</div>

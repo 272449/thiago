@@ -1,1 +1,22 @@
-<p>ex4 works!</p>
+<h2>Exercício 4</h2>
+
+<p>Produto: {{ nomeProduto }}</p>
+<p>Quantidade: {{ quantidadeEstoque }}</p>
+
+<p *ngIf="quantidadeEstoque > 0">
+  Produto disponível
+</p>
+
+<p *ngIf="quantidadeEstoque === 0">
+  Produto sem estoque
+</p>
+
+<button (click)="adicionarEstoque()">
+  Adicionar
+</button>
+
+<button
+  (click)="removerEstoque()"
+  [disabled]="quantidadeEstoque === 0">
+  Remover
+</button>
